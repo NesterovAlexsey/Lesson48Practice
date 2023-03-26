@@ -1,5 +1,8 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -93,7 +96,25 @@ public class RectangleComparatorTest {
     }
     assertTrue(flag);
   }
-//
-//  @Test
-//  public void
+
+  @Test
+  public void sort(){
+    Rectangle first = new Rectangle(1, 2);
+    Rectangle second = new Rectangle(4, 5);
+    Rectangle third = new Rectangle (6, 7);
+
+    List<Rectangle> actual = new ArrayList<>();
+    actual.add(first);
+    actual.add(third);
+    actual.add(second);
+
+    List<Rectangle> expected = new ArrayList<>();
+    expected.add(first);
+    expected.add(second);
+    expected.add(third);
+
+    actual.sort(comparator);
+
+    assertEquals(expected, actual);
+  }
 }
