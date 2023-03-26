@@ -56,4 +56,27 @@ public class RectangleComparatorTest {
     assertEquals(0, result2);
   }
 
+  @Test
+  public void nullWidthRectanglesCompare() {
+    Rectangle first = new Rectangle(1, 0);
+    Rectangle second = new Rectangle(2, 0);
+
+    int result = comparator.compare(first, second);
+    int result2 = comparator.compare(second, first);
+
+    assertEquals(0, result);
+    assertEquals(0, result2);
+  }
+
+  @Test
+  public void nullWidthLengthRectanglesCompare() {
+    Rectangle first = new Rectangle(0, 0);
+    Rectangle second = new Rectangle(0, 0);
+
+    int result = comparator.compare(first, second);
+    int result2 = comparator.compare(second, first);
+
+    assertEquals(0, result);
+    assertEquals(0, result2);
+  }
 }
