@@ -18,5 +18,15 @@ public class RectangleTest {
     assertTrue(flag);
   }
 
-  
+  @Test
+  public void negativeLengthArgument(){
+    boolean flag = false;
+
+    try {
+      Rectangle first = new Rectangle(1, -2);
+    } catch (IllegalArgumentException e) {
+      flag = true;
+    }
+    assertTrue(flag);
+  }
 }
