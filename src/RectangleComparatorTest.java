@@ -44,4 +44,16 @@ public class RectangleComparatorTest {
     assertEquals(result2, result);
   }
 
+  @Test
+  public void nullLengthRectanglesCompare() {
+    Rectangle first = new Rectangle(0, 2);
+    Rectangle second = new Rectangle(0, 1);
+
+    int result = comparator.compare(first, second);
+    int result2 = comparator.compare(second, first);
+
+    assertEquals(0, result);
+    assertEquals(0, result2);
+  }
+
 }
