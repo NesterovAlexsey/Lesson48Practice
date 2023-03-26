@@ -19,4 +19,16 @@ public class RectangleComparatorTest {
     assertTrue(result < 0);
     assertTrue(result2 > 0);
   }
+
+  @Test
+  public void equalSquareComparisonSameLengthWidth() {
+    Rectangle first = new Rectangle(1, 2);
+    Rectangle second = new Rectangle(1, 2);
+
+    int result = comparator.compare(first, second);
+    int result2 = comparator.compare(second, first);
+
+    assertEquals(result, result2);
+    assertEquals(result2, result);
+  }
 }
