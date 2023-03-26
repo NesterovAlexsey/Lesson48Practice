@@ -1,13 +1,11 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RectangleTest {
 
   @Test
-  public void negativeWidthArgument(){
+  public void negativeWidthArgument() {
     boolean flag = false;
 
     try {
@@ -19,7 +17,7 @@ public class RectangleTest {
   }
 
   @Test
-  public void negativeLengthArgument(){
+  public void negativeLengthArgument() {
     boolean flag = false;
 
     try {
