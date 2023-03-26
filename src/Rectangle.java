@@ -10,7 +10,13 @@ public class Rectangle {
   private final int width;
 
   public Rectangle(int length, int width){
+    if (length < 0) {
+      throw new IllegalArgumentException("Length couldn't be negative");
+    }
     this.length = length;
+    if (width < 0) {
+      throw new IllegalArgumentException("Width couldn't be negative");
+    }
     this.width = width;
   }
 
