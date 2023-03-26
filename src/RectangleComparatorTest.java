@@ -31,4 +31,17 @@ public class RectangleComparatorTest {
     assertEquals(result, result2);
     assertEquals(result2, result);
   }
+
+  @Test
+  public void equalSquareComparisonDifferentLengthWidth() {
+    Rectangle first = new Rectangle(1, 2);
+    Rectangle second = new Rectangle(2, 1);
+
+    int result = comparator.compare(first, second);
+    int result2 = comparator.compare(second, first);
+
+    assertEquals(result, result2);
+    assertEquals(result2, result);
+  }
+
 }
