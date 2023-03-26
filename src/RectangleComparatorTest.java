@@ -79,4 +79,21 @@ public class RectangleComparatorTest {
     assertEquals(0, result);
     assertEquals(0, result2);
   }
+
+  @Test
+  public void extrimBigSquareComparison() {
+    Rectangle first = new Rectangle(2, Integer.MAX_VALUE);
+    Rectangle second = new Rectangle(2, 3);
+    boolean flag = false;
+
+    try {
+      int result = comparator.compare(first, second);
+    } catch (IllegalArgumentException e) {
+      flag = true;
+    }
+    assertTrue(flag);
+  }
+//
+//  @Test
+//  public void
 }
