@@ -9,7 +9,7 @@ public class Rectangle {
 
   private final int width;
 
-  public Rectangle(int length, int width){
+  public Rectangle(int length, int width) {
     if (length < 0) {
       throw new IllegalArgumentException("Length couldn't be negative");
     }
@@ -20,7 +20,7 @@ public class Rectangle {
     this.width = width;
   }
 
-  public int getLength(){
+  public int getLength() {
     return length;
   }
 
@@ -29,8 +29,8 @@ public class Rectangle {
   }
 
   @Override
-  public String toString(){
-    return String.format ("Rectangle length = %d, width = %d, square = %d",
+  public String toString() {
+    return String.format("Rectangle length = %d, width = %d, square = %d",
         length, width, length * width);
   }
 }

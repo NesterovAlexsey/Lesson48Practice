@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RectangleComparatorTest {
@@ -98,10 +97,10 @@ public class RectangleComparatorTest {
   }
 
   @Test
-  public void sort(){
+  public void sort() {
     Rectangle first = new Rectangle(1, 2);
     Rectangle second = new Rectangle(4, 5);
-    Rectangle third = new Rectangle (6, 7);
+    Rectangle third = new Rectangle(6, 7);
 
     List<Rectangle> actual = new ArrayList<>();
     actual.add(first);
