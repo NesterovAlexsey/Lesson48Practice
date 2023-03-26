@@ -21,4 +21,10 @@ public class Rectangle {
   public int getWidth() {
     return width;
   }
+
+  @Override
+  public String toString(){
+    return String.format ("Rectangle length = %d, width = %d, square = %d",
+        length, width, length * width);
+  }
 }
