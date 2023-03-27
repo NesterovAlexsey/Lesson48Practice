@@ -20,12 +20,20 @@ import java.io.InputStreamReader;
 
 public class Timestamp {
 
+  final static int MAXIMAL_HOURS = 24;
+  final static int MAXIMAL_MINUTES = 60;
   private int hour;
 
   private int minute;
 
   public Timestamp(int hour, int minute) {
+    if (hour > MAXIMAL_HOURS) {
+      throw new IllegalArgumentException("Invalid value of hours");
+    }
     this.hour = hour;
+    if (minute > MAXIMAL_MINUTES) {
+      throw new IllegalArgumentException("Invalid value of minutes");
+    }
     this.minute = minute;
   }
 
