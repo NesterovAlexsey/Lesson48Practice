@@ -14,6 +14,10 @@
 
 package Task2Clock;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Timestamp {
 
   private int hour;
@@ -33,5 +37,15 @@ public class Timestamp {
     return minute;
   }
 
+  public void setHour() throws IOException {
+    BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 
+    int addHour = Integer.parseInt(read.readLine());
+    while (addHour < 0) {
+      System.out.println("Enter 0 or positive number of hours:");
+      addHour = Integer.parseInt(read.readLine());
+    }
+
+    this.hour = getHour() + addHour;
+  }
 }
