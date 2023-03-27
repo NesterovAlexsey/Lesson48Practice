@@ -16,5 +16,13 @@ package Task2Clock;
 
 public class Timestamp {
 
+  private int hour;
+
+  private int minute;
+
+  public Timestamp(int hour, int minute) {
+    this.hour = hour;
+    this.minute = minute;
+  }
 
 }
