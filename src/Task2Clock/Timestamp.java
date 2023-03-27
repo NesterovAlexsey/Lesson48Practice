@@ -2,8 +2,8 @@
 
 //У класса должны быть методы "добавить часы" и "добавить минуты",
 // принимающий количество часов (или минут) для добавления.
-//
 //В классе должен быть реализован интерфейс Comparable,
+
 // который бы сравнивал отметки времени (раньше - меньше, позже - больше).
 //
 //Примечание: считаем, что корректные отметки времени находятся только в диапазоне от 00:00 до 23:59
@@ -18,7 +18,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Timestamp {
+public class Timestamp implements Comparable<Timestamp> {
 
   final static int MAXIMAL_HOURS = 24;
   final static int MAXIMAL_MINUTES = 60;
@@ -74,5 +74,13 @@ public class Timestamp {
   @Override
   public String toString() {
     return hour + ":" + minute;
+  }
+
+  @Override
+  public int compareTo(Timestamp other) {
+    if (this.hour != other.getHour()) {
+      return this.hour - other.getHour();
+    }
+    return this.minute - other.getMinute();
   }
 }
