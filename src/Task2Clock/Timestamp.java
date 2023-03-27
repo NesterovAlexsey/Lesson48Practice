@@ -48,4 +48,16 @@ public class Timestamp {
 
     this.hour = getHour() + addHour;
   }
+
+  public void setMinute() throws IOException {
+    BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+
+    int addMinute = Integer.parseInt(read.readLine());
+    while (addMinute < 0) {
+      System.out.println("Enter 0 or positive number of minutes:");
+      addMinute = Integer.parseInt(read.readLine());
+    }
+
+    this.hour = getMinute() + addMinute;
+  }
 }
