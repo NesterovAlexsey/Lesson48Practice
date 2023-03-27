@@ -68,4 +68,9 @@ public class Timestamp {
 
     this.hour = getMinute() + addMinute;
   }
+
+  @Override
+  public String toString() {
+    return hour + ":" + minute;
+  }
 }
